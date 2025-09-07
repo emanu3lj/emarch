@@ -1,0 +1,1 @@
+vim.set.number = true
