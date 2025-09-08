@@ -28,6 +28,7 @@ zle -N fzf_history_widget
 
 # Bind keys
 bindkey '^H' fzf_history_widget   # Ctrl-H opens histor
+bindkey '^Y' autosuggest-accept
 
 # --- Aliases ---
 alias vim="nvim"
