@@ -20,7 +20,7 @@ eval "$(starship init zsh)"
 
 # Vim-style fzf history widget
 fzf_history_widget() {
-  BUFFER=$(history | tac | awk '{$1="";$1="";if(!seen[$0]++) print$0}' | uniq |  fzf)
+  BUFFER=$(history | tac | awk '{$1="";$1="";if(!seen[$0]++) print$0}' |  fzf --no-sort --bind "ctrl-n:down,ctrl-p:up,ctrl-y:accept" --height 40% --reverse)
   CURSOR=${#BUFFER}
   zle reset-prompt
 }
