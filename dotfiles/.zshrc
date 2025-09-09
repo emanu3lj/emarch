@@ -12,6 +12,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # --- SETTINGS ---
+#export HISTCONTROL=ignoredups
 
 # --- Prompt ---
 # go to $HOME/.config/starship.toml
@@ -19,15 +20,16 @@ eval "$(starship init zsh)"
 
 # Vim-style fzf history widget
 fzf_history_widget() {
-  BUFFER=$(history 1 | awk '{$1=""; print substr($0,2)}' | fzf --no-sort --bind "ctrl-n:down,ctrl-p:up,ctrl-y:accept" --height 40% --reverse)
+  BUFFER=$(history | tac | awk '{$1="";$1="";if(!seen[$0]++) print$0}' | uniq |  fzf)
   CURSOR=${#BUFFER}
   zle reset-prompt
 }
+
 # Register widget
 zle -N fzf_history_widget
 
 # Bind keys
-bindkey '^H' fzf_history_widget   # Ctrl-H opens histor
+bindkey '^H' fzf_history_widget   # Ctrl-H opens history search
 bindkey '^Y' autosuggest-accept
 
 # --- Aliases ---
