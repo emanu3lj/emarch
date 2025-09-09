@@ -35,3 +35,4 @@ bindkey '^Y' autosuggest-accept
 # --- Aliases ---
 alias vim="nvim"
 alias chnvi="~/Linuxscripts/chnvi"
+alias c-emarch="cd $HOME/emarch"

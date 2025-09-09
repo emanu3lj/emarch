@@ -1,1 +1,1 @@
-vim.set.number = true
+vim.opt.number = true
