@@ -20,10 +20,10 @@ vim.opt.scrolloff = 30 -- alwas leaves 30 lines when scroll up and down
 
 --- KEY MAP ---
 vim.g.mapleader = " "
-vim.keymap.set('n', '<leader>ee', ':Ex<CR>')
+vim.keymap.set('n', '<leader>ee', ':Ex<CR>', {desc = "Open file picker in cwd"})
+vim.keymap.set('n', '<leader>w', ':w', {desc ="Save file"})
 
-
-
+vim.keymap.set('n', '<leader>sor', ':mksession! Session.vim | restart source Session.vim')
 
 
 
