@@ -1,4 +1,5 @@
---- Settings ---
+require("lazy-init")
+-- Settings --
 
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -23,7 +24,7 @@ vim.g.mapleader = " "
 vim.keymap.set('n', '<leader>ee', ':Ex<CR>', {desc = "Open file picker in cwd"})
 vim.keymap.set('n', '<leader>w', ':w', {desc ="Save file"})
 
-vim.keymap.set('n', '<leader>sor', ':mksession! Session.vim | restart source Session.vim')
+vim.keymap.set('n', '<leader>sor', ':mksession! Session.vim | restart source Session.vim<CR>')
 
 
 
