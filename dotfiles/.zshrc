@@ -36,3 +36,4 @@ bindkey '^Y' autosuggest-accept
 alias vim="nvim"
 alias chnvi="~/Linuxscripts/chnvi"
 alias c-emarch="cd $HOME/emarch"
+alias c-hypr="nvim $HOME/.config/hypr"
