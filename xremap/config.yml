@@ -1,0 +1,20 @@
+default_mode: normal
+
+keymap:
+  - name: "Switch to VIM mode"
+    remap:
+      CTRL-I: {set_mode: VIM}
+    mode: normal  
+
+  - name: Switch to !VIM mode"
+    remap:
+      CTRL-I: {set_mode: normal} 
+    mode: VIM
+  
+  - name: "VIM MODE"
+    remap:
+      h: left
+      j: down
+      k: up
+      l: right
+    mode: VIM
